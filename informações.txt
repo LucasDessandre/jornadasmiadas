@@ -1,7 +1,8 @@
 INFORMAÇÕES
 
 Esse foi um jogo que eu desenvolvi no visualg em meu curso de ADS, a proposta era que
-apenas os comandos: escreval, leia, se, senao, enquanto, vetor e aleatório. Esse é um jogo narrativo
-e que conta uma história com vários diálogos. Espero que gostem!!
+apenas os comandos: escreval, leia, se, senao, enquanto, vetor e aleatório fossem utilizado.
+Esse é um jogo narrativo e que conta uma história com vários diálogos. Espero que gostem!!
+
 
 Desenvolvido por: Lucas Grauth Dessandre 
