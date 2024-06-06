@@ -1,5 +1,5 @@
-algoritmo "semnome"
-// Função : Protótipo de Jogo- Aventuras gatônicas!
+algoritmo "Jornadas Miadas"
+// Função : Protótipo de Jogo- Jornadas Miadas
 // Autor : Lucas Grauth Dessandre-ADS Fatec
 // Data : 21/05/2024
 // Seção de Declarações
@@ -14,7 +14,7 @@ segundaetapacutscene <- 1
 segundaetapa <- 0
 danoreal <- 0
 metadehp <- 1
-vigor <- 200
+vigor <- 200                                                                       //é isso! Muito obrigado por assistir !!
 playervida <- 200
 npcvida <- 200
 escreval("       ____________________________________________________________________ ")
@@ -70,7 +70,7 @@ se (resumo = 1) entao  //resumo sobre o jogo
    escreval("==================================")
    escreva("Olá, ")
    tempo <- 0
-   enquanto (tempo <= 1500) faca
+   enquanto (tempo <= 1500) faca  //estrutura usada para cronometrar o tempo de tela, foi usada em todo o código
       tempo <- tempo + 2
    FimEnquanto
    escreva("seja ")
@@ -1369,7 +1369,7 @@ enquanto (tempo <= 4000) faca      //estrutura para cronometrar o tempo de tela 
 FimEnquanto
 limpatela
 resp <- "sim"
-enquanto (resp = "sim") faca // estrutura básica do meu código que fará ele funcionar
+enquanto (resp = "sim") faca // estrutura básica do meu código que fará ele funcionar/ primeiro enquanto, é ele que dá a condição desse código se repetir
    inv <- 0
    item <- 0
    cont <- 0
@@ -9379,14 +9379,14 @@ enquanto (resp = "sim") faca // estrutura básica do meu código que fará ele func
                escreval("   _             _                                    _             ")  //opções de golpes para usar
                escreval("  | .-.       .-. |                        __ _  ___ | |_ __   ___  ___ ")
                escreval("   \.-..-...-..-./    _                   / _` |/ _ \| | '_ \ / _ \/ __|")
-               escreval("    |= _:...:_ =|    /:`)                | (_| | (_) | | |_) |  __/\__ \")
+               escreval("    |= _:...:_ =|    /:`)                | (_| | (_) | | |_) |  __/\__ \")    //sistema de batalha começa aqui, você pode usar 4 golpes padrões, com cada um tendo uma chance de acertar o inimigo
                escreval("    \ <6>   <6> /   /  /                  \__, |\___/|_| .__/ \___||___/")
                escreval("    |=   |_|   =|   |:'\                  |___/        |_|  ")
                escreval("    >\:.  .  .:/<    ) .|")
                escreval("     /'-._^_.-'\    /.:/")
                escreval("    /::.     .::\  /' /              [1]cabeçada         (10-20 dano - 5 vigor)")
                escreval("  .| '::.  .::'  |;.:/               [2]arranhão         (20-35 dano - 10 vigor)")
-               escreval(" /`\:.         .:/`\(                [3]baforada atômica (65-90 dano - 85 vigor)")
+               escreval(" /`\:.         .:/`\(                [3]baforada atômica (65-90 dano - 85 vigor)")     //cada golpe consumo certa quantia de vigor, tome cuidado com isso
                escreval("|:. | ':.   .:' | .:|                [4]kamehameha       (100-150 dano - 120 vigor)")
                escreval("| ` |:.;     ;.:| ` |              _     _            __       _  ")
                escreval(" \:.|  |:. .:|  |.:/        __   _(_) __| | __ _     / /__   _(_) __ _  ___  _ __ ")
@@ -9432,7 +9432,7 @@ enquanto (resp = "sim") faca // estrutura básica do meu código que fará ele func
                      escreval("  .| '::.  .::'  |;.:/                | ____| \ | | ____|  _ \ / ___|_ _|  / \     ")
                      escreval(" /`\:.         .:/`\(                 |  _| |  \| |  _| | |_) | |  _ | |  / _ \")
                      escreval("|:. | ':.   .:' | .:|                 | |___| |\  | |___|  _ <| |_| || | / ___ \")
-                     escreval("| ` |:.;     ;.:| ` |                 |_____|_| \_|_____|_| \_\\____|___/_/   \_\       ")
+                     escreval("| ` |:.;     ;.:| ` |                 |_____|_| \_|_____|_| \_\\____|___/_/   \_\       ") //caso não tenha vigor o suficiente, aparecerá essa tela
                      escreval(" \:.|  |:. .:|  |.:/          ")
                      escreval("  \ |:.|     |.:| /             ")
                      escreval("  /'|  |\   /|  |`\                  ")
@@ -9541,7 +9541,7 @@ enquanto (resp = "sim") faca // estrutura básica do meu código que fará ele func
                               escreva(nick, " usou cabeçada e causou ", atk1player, " de dano")
                               tempo <- 0
                               enquanto (tempo <= 8000) faca       //tempo de tela
-                                 tempo <- tempo + 2
+                                 tempo <- tempo + 2               //novamente uma estrutura de cronometagem
                               FimEnquanto
                               limpatela
                            senao
@@ -9798,7 +9798,7 @@ enquanto (resp = "sim") faca // estrutura básica do meu código que fará ele func
                            vigor <- vigor - 85          //gasto por usar a skill
                            porcentagem <- (atk3player * 80)/100      //porcentagem do crítico(80%)
                            enquanto (porcentagem > 0) faca           // estrutura para converter valor real em inteiro
-                              porcentagem <- porcentagem - 1
+                              porcentagem <- porcentagem - 1         //estrutura para não deixar o valor em decimal
                               danoreal <- danoreal + 1
                            FimEnquanto
                            danototal <- atk3player + danoreal      //dano total
@@ -10083,7 +10083,7 @@ enquanto (resp = "sim") faca // estrutura básica do meu código que fará ele func
                   Fimse
                FimSe
                se (npcvida < 100) entao       //quando tirada metade da vida do npc,  player ganhará um bônus
-                  se (npcvida <> 0) entao
+                  se (npcvida <> 0) entao //usado para impedir de acontecer quando a vida no inimigo zerar
                      se (metadehp = 1) entao     // "chave" que fará essa estrutura acontecer apenas uma vez
                         vigor <- vigor + 75
                         escreval("   _             _                                    _             ")
@@ -10111,7 +10111,7 @@ enquanto (resp = "sim") faca // estrutura básica do meu código que fará ele func
                         escreval("Você tirou metade da vida de MR.Champions!")
                         escreval("Portanto, você receberá +75 de vigor!!!")
                         tempo <- 0
-                        metadehp <- 2
+                        metadehp <- 2    //mudará o valor da variável para 2 (anteriormente 1), o que fará essa estrutura ocorrer apenas uma vez
                         enquanto (tempo <= 8000) faca
                            tempo <- tempo + 2
                         FimEnquanto
@@ -10137,7 +10137,7 @@ enquanto (resp = "sim") faca // estrutura básica do meu código que fará ele func
                            danoreal <- danoreal + 1
                         FimEnquanto
                         atk1npc <- atk1npc + danoreal       //dano total
-                        playervida <- playervida - atk1npc   //npc perde vida ao receber o dano
+                        playervida <- playervida - atk1npc   //o jogador perde vida ao receber o dano
                         se(playervida < 0) entao
                            playervida <- 0                //playervida recebe o valor 0 para não ficar negativo
                         FimSe
@@ -10174,7 +10174,7 @@ enquanto (resp = "sim") faca // estrutura básica do meu código que fará ele func
                         FimEnquanto
                         limpatela
                      senao
-                        se (buff1npc <> "ativado") entao  //apenas acontece se o buff 1 não estiver ativado
+                        se (buff1npc <> "ativado") entao  //apenas acontece se o buff 1 não estiver ativado, não irá ocorrer quando buff 2 estiver "ativado"
                            aleatorio 35, 50
                            leia(atk1npc)
                            aleatorio off
@@ -10328,7 +10328,7 @@ enquanto (resp = "sim") faca // estrutura básica do meu código que fará ele func
                   escreval()
                   escreval()
                   tempo <- 0
-                  enquanto (tempo <= 4000) faca
+                  enquanto (tempo <= 4000) faca        //foi usada diversas vezes as mesmas imagens com algumas alterações(textos, desenhos...) e com uma estrutura de cronometagem para dar a impressão de animação
                      tempo <- tempo + 2
                   FimEnquanto
                   limpatela
@@ -11753,7 +11753,7 @@ enquanto (resp = "sim") faca // estrutura básica do meu código que fará ele func
          FimSe
       FimSe
    FimSe
-   enquanto (inv = 1) faca
+   enquanto (inv = 1) faca      //sistema de inventário
       se (inv = 1) entao
          escrevaL()
          escrevaL()
@@ -11880,7 +11880,7 @@ enquanto (resp = "sim") faca // estrutura básica do meu código que fará ele func
             limpatela
          FimSe
       FimSe //inv = 1 fimse
-      se (item = 1) entao
+      se (item = 1) entao //a partir do item selecionado, te dará a descrição dele
          escreval()
          escreval()
          escreval()
@@ -11899,7 +11899,7 @@ enquanto (resp = "sim") faca // estrutura básica do meu código que fará ele func
          escreval()
          tempo <- 0
          enquanto (tempo <= 1000) faca
-            tempo <- tempo + 2
+            tempo <- tempo + 2             //novamenta, repetidas imagens com uma palavra a mais e com a estrutura de cronometagem
          FimEnquanto
          limpatela
          escreval()
@@ -14710,7 +14710,7 @@ enquanto (resp = "sim") faca // estrutura básica do meu código que fará ele func
                   FimEnquanto
                   limpatela
                senao
-                  se (item = 5) entao
+                  se (item = 5) entao  //cena extra que aparecerá quando você for sair do inventário, dependendo dos itens que você tiver
                      inv <- 0
                      se ( missaocompleta = 1)entao
                         resp <- "nao"
@@ -15189,7 +15189,7 @@ enquanto (resp = "sim") faca // estrutura básica do meu código que fará ele func
          FimSe  //fimse do segundo item /segundofimse
       FimSe //fimse do primeiro item, caso mais itens forem adicionados é aqui que será criada outra estrutura  /primeirofimse
    FimEnquanto//fimenquanto (inv = 1)
-FimEnquanto
+FimEnquanto //fimenquanto do primeiro enquanto, que dá a condição desse código de repetir
 se (resp = "nao") entao //cutscene final- final bom
    limpatela
    escreval("   _             _")
